@@ -1,0 +1,18 @@
+h1{
+	font-size: 40px;
+	color: red;
+}
+#titulo{
+	background-color: black;
+	color: white;
+	box-shadow: -13px -35px 53px #000000;
+}
+.colorRojo{
+	color: red;
+}
+.colorAmarillo{
+	color: yellow;
+}
+.colorAzul{
+	color: blue;
+}
