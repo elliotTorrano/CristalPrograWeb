@@ -11,7 +11,7 @@
     <!-- Bootstrap -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link href="css/custom.css" rel="stylesheet">
-
+    
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
@@ -20,12 +20,22 @@
     <![endif]-->
   </head>
   <body>
+   
+   
     <div class="container">
-        <!--Renglón 1 Carta de entrada fija-->
        
+       <!-- a) cuando pase una carta solo pasara una vez
+b) solo se puede marcar una carta que ya paso -->
+        <!--Renglón 1 Carta de entrada fija-->
+        <div id="bannerV" class="alert alert-success" role="alert" style="display:none">FELICIDADES, GANASTE!!!</div>
+        <div id="bannerD" class="alert alert-danger" role="alert" style="display:none">LO SIENTO, HAS PERDIDO POR NO SELECCIONAR TUS CARTAS</div>
         <div class="row" id="topDiv">
           <div class="col-md-4 col-md-offset-4">
-            <img id="prin" src="images/1.png" width="200px">
+            <img id="prin" src="images/1.jpg" width="150px">
+          </div>
+          <div>
+              <button type="button" id="str" class="btn btn-default">INICIAR</button>
+              <button type="button" id="restart" class="btn btn-default">REINICIAR</button>
           </div>
         </div>
 
@@ -33,7 +43,7 @@
         <div class="row">
           <div class="col-md-4">
               <div style="position:relative"> <!-- Aquí se empieza el sobreponer la imagen -->
-                  <img id="i2" src="images/2.png" width="200px" /> <!-- Imagen de fondo -->
+                  <img id="i0" src="images/1.jpg" width="150px" /> <!-- Imagen de fondo -->
                   <div style="position:absolute; top:25%; left:0;"> <!-- Contenedor de la segunda imagen -->
                       <img src="images/frijol.png" style="display:none" id="fr2" width="200px" /> <!-- Imagen sobrepuesta -->
                   </div>
@@ -44,7 +54,7 @@
             
           <div class="col-md-4">
               <div style="position:relative"> <!-- Aquí se empieza el sobreponer la imagen -->
-                  <img id="i3" src="images/3.png" width="200px" /> <!-- Imagen de fondo -->
+                  <img id="i1" src="images/1.jpg" width="150px" /> <!-- Imagen de fondo -->
                   <div style="position:absolute; top:25%; left:0;"> <!-- Contenedor de la segunda imagen -->
                       <img src="images/frijol.png" style="display:none" id="fr3" width="200px" /> <!-- Imagen sobrepuesta -->
                   </div>
@@ -53,7 +63,7 @@
             
           <div class="col-md-4">
               <div style="position:relative"> <!-- Aquí se empieza el sobreponer la imagen -->
-                  <img id="i4" src="images/4.png" width="200px" /> <!-- Imagen de fondo -->
+                  <img id="i2" src="images/1.jpg" width="150px" /> <!-- Imagen de fondo -->
                   <div style="position:absolute; top:25%; left:0;"> <!-- Contenedor de la segunda imagen -->
                       <img src="images/frijol.png" style="display:none" id="fr4" width="200px" /> <!-- Imagen sobrepuesta -->
                   </div>
@@ -65,7 +75,7 @@
         <div class="row">
           <div class="col-md-4">
               <div style="position:relative"> <!-- Aquí se empieza el sobreponer la imagen -->
-                  <img id="i5" src="images/5.png" width="200px" /> <!-- Imagen de fondo -->
+                  <img id="i3" src="images/1.jpg" width="150px" /> <!-- Imagen de fondo -->
                   <div style="position:absolute; top:25%; left:0;"> <!-- Contenedor de la segunda imagen -->
                       <img src="images/frijol.png" style="display:none" id="fr5" width="200px" /> <!-- Imagen sobrepuesta -->
                   </div>
@@ -74,7 +84,7 @@
             
           <div class="col-md-4">
               <div style="position:relative"> <!-- Aquí se empieza el sobreponer la imagen -->
-                  <img id="i6" src="images/6.png" width="200px" /> <!-- Imagen de fondo -->
+                  <img id="i4" src="images/1.jpg" width="150px" /> <!-- Imagen de fondo -->
                   <div style="position:absolute; top:25%; left:0;"> <!-- Contenedor de la segunda imagen -->
                       <img src="images/frijol.png" style="display:none" id="fr6" width="200px" /> <!-- Imagen sobrepuesta -->
                   </div>
@@ -83,7 +93,7 @@
             
           <div class="col-md-4">
               <div style="position:relative"> <!-- Aquí se empieza el sobreponer la imagen -->
-                  <img id="i7" src="images/7.png" width="200px" /> <!-- Imagen de fondo -->
+                  <img id="i5" src="images/1.jpg" width="150px" /> <!-- Imagen de fondo -->
                   <div style="position:absolute; top:25%; left:0;"> <!-- Contenedor de la segunda imagen -->
                       <img src="images/frijol.png" style="display:none" id="fr7" width="200px" /> <!-- Imagen sobrepuesta -->
                   </div>
@@ -95,7 +105,7 @@
         <div class="row">
           <div class="col-md-4">
               <div style="position:relative"> <!-- Aquí se empieza el sobreponer la imagen -->
-                  <img id="i8" src="images/8.png" width="200px" /> <!-- Imagen de fondo -->
+                  <img id="i6" src="images/1.jpg" width="150px" /> <!-- Imagen de fondo -->
                   <div style="position:absolute; top:25%; left:0;"> <!-- Contenedor de la segunda imagen -->
                       <img src="images/frijol.png" style="display:none" id="fr8" width="200px" /> <!-- Imagen sobrepuesta -->
                   </div>
@@ -103,8 +113,8 @@
           </div>
             
           <div class="col-md-4">
-              <div style="position:relative"> <!-- Aquí se empieza el sobreponer la imagen -->
-                  <img id="i9" src="images/9.png" width="200px" /> <!-- Imagen de fondo -->
+              <div aria-disabled="true" style="position:relative"> <!-- Aquí se empieza el sobreponer la imagen -->
+                  <img id="i7" src="images/1.jpg" width="150px" /> <!-- Imagen de fondo -->
                   <div style="position:absolute; top:25%; left:0;"> <!-- Contenedor de la segunda imagen -->
                       <img src="images/frijol.png" style="display:none" id="fr9" width="200px" /> <!-- Imagen sobrepuesta -->
                   </div>
@@ -113,17 +123,11 @@
             
           <div class="col-md-4">
               <div style="position:relative"> <!-- Aquí se empieza el sobreponer la imagen -->
-                  <img id="i0" src="images/0.png" width="200px" /> <!-- Imagen de fondo -->
+                  <img id="i8" src="images/1.jpg" width="150px" /> <!-- Imagen de fondo -->
                   <div style="position:absolute; top:25%; left:0;"> <!-- Contenedor de la segunda imagen -->
                       <img src="images/frijol.png" style="display:none" id="fr0" width="200px" /> <!-- Imagen sobrepuesta -->
                   </div>
               </div>
-          </div>
-        </div>
-
-        <div class="row">
-          <div class="col-md-4 col-md-offset-4">
-            <button type="button" id="restart" class="btn btn-default">Reiniciar</button>
           </div>
         </div>
             
