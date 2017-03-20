@@ -13,3 +13,9 @@ body{
     font-family: "Times New Roman";
     text-align: center;
 }
+
+#focus{
+    -moz-box-shadow:  10px 10px 5px #6e6799;
+    -webkit-box-shadow: 10px 10px 5px #6e6799;
+    box-shadow: 10px 10px 5px #6e6799;
+}
